@@ -47,16 +47,16 @@ If you <b>want to customize</b> it you can use the follwing options:
 - **Events**
   - `select` will be fired on the <i>destination box</i> when an <i>option</i> is selected.
     The event function will get the following parameters:
-    - `value` the value of the selected <i>option</i>
-    - `name` the name of the input field of the selected <i>option</i>
-    - `item` a reference to the `<li>` element in the <i>option box</i>
-    - `optionBox` a reference to the <i>option box</i> `<ul>` element
+      - `value` the value of the selected <i>option</i>
+      - `name` the name of the input field of the selected <i>option</i>
+      - `item` a reference to the `<li>` element in the <i>option box</i>
+      - `optionBox` a reference to the <i>option box</i> `<ul>` element
   - `add` will be fired on the <i>destination box</i> the predefined selections inside the <i>destination box</i> are parsed.
     The event function will get the following parameters:
-    - `value` the value of the selected <i>option</i>
-    - `name` the name of the input field of the selected <i>option</i>
-    - `item` a reference to the `<li>` element in the <i>option box</i>
-    - `optionBox` a reference to the <i>option box</i> `<ul>` element
+      - `value` the value of the selected <i>option</i>
+      - `name` the name of the input field of the selected <i>option</i>
+      - `item` a reference to the `<li>` element in the <i>option box</i>
+      - `optionBox` a reference to the <i>option box</i> `<ul>` element
 
 The HTML markup
 ---------------
