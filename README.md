@@ -37,11 +37,10 @@ If you want to customize it you can use the follwing options:
 
     });
 
-  - options:
-
-highlightColor:  The color which will be used to highlight the selection destination when a element gets added (default: `#cedee6`)
-removeButton:  The remove link which will be add to the all selected item (default: `new Element('a',{'html':'&#215;'})`)
-removeButtonClass: The class which will be add to the remove link.
+  - **options**
+    - highlightColor:  The color which will be used to highlight the selection destination when a element gets added (default: `#cedee6`)
+    - removeButton:  The remove link which will be add to the all selected item (default: `new Element('a',{'html':'&#215;'})`)
+    - removeButtonClass: The class which will be add to the remove link.
 
 
 ###  The HTML markup
@@ -59,9 +58,8 @@ The options `<ul>` elements must have the following format.
         <li class="jsMultipleSelectItem" data-value="myValue3" data-type="remove">Removeable Value Name 3></li>
     </ul>
 
-**Attributes**
 
-The `<ul>` element
+**The `<ul>` element Attributes**
 - `data-name` this is the name attribute which the hidden input fiels will get which are created when adding a selection to the destination box.
 - `data-jsMultipleSelect` the id which connect your option boxes with a destination box.
 - `data-type`
@@ -69,7 +67,7 @@ The `<ul>` element
   - "duplicates" allows to add options multiple times to the destination box.
   - don't add this attribute, if you want that the options stay in the box but can be added only once to the destination box (default).
 
-The `<li>` elements
+**The `<li>` elements Attributes**
 - `data-value` the value which will be add to the hidden input field created when selecting this value.
 - `data-type` you can also add the data-type attribute only or also to the `<li>` elements to specify their behavior.
 
