@@ -4,6 +4,8 @@ Creates a multiple selection where you can have multiple <i>option boxes</i> add
 You can also change the behavior of the <i>option boxes</i>:<br>
 remove the options after selecting, or be able to add options multiple times to the <i>destination box</i>.
 
+Published under the MIT-License.
+
 ![Screenshot](https://github.com/frozeman/jsMultipleSelect/raw/master/screenshot.png)
 
 The Javascript
