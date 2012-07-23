@@ -1,0 +1,106 @@
+/*
+* feindura - Flat File Content Management System
+* Copyright (C) Fabian Vogelsteller [frozeman.de]
+*
+* Published under the MIT-License
+*/
+
+/* Layout of the SELECTION BOXES */
+ul.jsMultipleSelect,
+ul.jsMultipleSelectDropBox {
+    position: relative;
+    margin: 0;
+    padding: 3px 5px;
+    list-style: none;
+    min-height: 150px;
+    max-height: 350px;
+    overflow: auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: inset 0 0 5px #ccc;
+    -moz-box-shadow: inset 0 0 5px #ccc;
+    box-shadow: inset 0 0 5px #ccc;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+
+}
+
+/* each SELECT ITEM */
+ul.jsMultipleSelect li.jsMultipleSelectItem,
+ul.jsMultipleSelectDropBox li.jsMultipleSelectItem {
+    position: relative;
+    margin: 3px 0;
+    padding: 3px 5px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: 0 0 5px #ccc;
+    -moz-box-shadow: 0 0 5px #ccc;
+    box-shadow: 0 0 5px #ccc;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+}
+ul.jsMultipleSelect li.jsMultipleSelectItem:hover,
+ul.jsMultipleSelectDropBox li.jsMultipleSelectItem:hover {
+    background-color: #c7d7fa;
+}
+
+/* the FILTER input */
+ul.jsMultipleSelect li.filter input,
+ul.jsMultipleSelectDropBox li.filter input {
+    width: 93.5%;
+    margin-left: -4px;
+    margin-top: -2px;
+    margin-bottom: 5px;
+    padding: 4px 5px;
+    padding-right: 20px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: inset 0 0 2px #ccc;
+    -moz-box-shadow: inset 0 0 2px #ccc;
+    box-shadow: inset 0 0 2px #ccc;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+}
+/* the FILTER CANCEL BUTTON */
+ul.jsMultipleSelect li.filter a.remove,
+ul.jsMultipleSelectDropBox li.filter a.close {
+    position: absolute;
+    top: 3px;
+    right: 8px;
+    padding: 0;
+    background: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* the SELECTION DROP BOX (DESTINATION BOX) */
+ul.jsMultipleSelectDropBox {
+    max-height: 350px;
+    min-height: 150px;
+    background-color: #f6f7fc;
+}
+ul.jsMultipleSelectDropBox li.jsMultipleSelectItem:hover {
+    background-color: #fff;
+}
+ul.jsMultipleSelectDropBox li.jsMultipleSelectItem span {
+    color: #82a5f6;
+}
+ul.jsMultipleSelectDropBox li.jsMultipleSelectItem a.remove {
+    position: relative;
+    display: none;
+    margin-top: -5px;
+    padding: 0;
+    background: none;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+}
+ul.jsMultipleSelectDropBox li:hover a.remove {
+    display: block; /* THIS IS IMPORTANT or you wont see the delete button */
+}

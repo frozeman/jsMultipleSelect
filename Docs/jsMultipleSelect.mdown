@@ -1,0 +1,8 @@
+Class: jsMultipleSelect(); {#Select}
+=======================
+
+### Syntax
+  new jsMultipleSelect({highlightColor: '#cccccc'});
+
+### Options
+1. highlightColor - 
