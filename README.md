@@ -49,9 +49,9 @@ removeButtonClass: The class which will be add to the remove link
 You need at least on &lt;ul&gt; element with the class "jsMultipleSelect"<br>
 and one with the class "jsMultipleSelectDestination"
 
-The selection &lt;ul&gt; elements must have the following format.
+The selection `&lt;ul&gt;` elements must have the following format.
 Each &lt;ul&gt; element with choices must have a "jsMultipleSelect" class.
-Each containing &lt;ul&gt; element must have a "jsMultipleSelectItem" class.
+Each containing `&lt;ul&gt;` element must have a "jsMultipleSelectItem" class.
 
   Attributes:
 
@@ -60,9 +60,9 @@ Each containing &lt;ul&gt; element must have a "jsMultipleSelectItem" class.
   - data-value: each li must have this attribute, which contains the value which the created input will get
 
 
-    &lt;ul class="jsMultipleSelect" data-name="myInputFieldName" data-jsMultipleSelect="1"&gt;
-        &lt;li class="filter"&gt;&lt;input type="text" placeholder="Type here to filter"&gt;&lt;/li&gt;
+    <ul class="jsMultipleSelect" data-name="myInputFieldName" data-jsMultipleSelect="1">
+        <li class="filter"&gt;&lt;input type="text" placeholder="Type here to filter"></li>
 
-        &lt;li class="jsMultipleSelectItem" data-value="myValue1"&gt;Value Name 1&lt;/li&gt;
-        &lt;li class="jsMultipleSelectItem" data-value="myValue2"&gt;Value Name 2&lt;/li&gt;
-    &lt;/ul&gt;
+        <li class="jsMultipleSelectItem" data-value="myValue1">Value Name 1></li>
+        <li class="jsMultipleSelectItem" data-value="myValue2">Value Name 2></li>
+    </ul>
