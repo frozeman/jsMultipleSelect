@@ -1,7 +1,7 @@
 jsMultipleSelect
 ================
-Creates a multiple selection where you can have multiple choice boxes beeing add to one selection.
-You can set that the choices are removed after selection, or that you can select one choice multiple times.
+Creates a multiple selection where you can have multiple option boxes selecting into one destination.<br>
+You can also change the behavior of the option boxes: remove the options after selecting, or be able to add options multiple times to the selection.
 
 ![Screenshot](https://github.com/frozeman/jsMultipleSelect/raw/master/screenshot.png)
 
@@ -41,9 +41,9 @@ If you want to customize it you can use the follwing options:
     removeButtonClass: The class which will be add to the remove link
 
 
-The selection &gt;ul&lt; elements must have the following format.
-Each &gt;ul&lt; element with choices must have a "jsMultipleSelect" class.
-Each containing &gt;li&lt; element must have a "jsMultipleSelectItem" class.
+The selection &lt;ul&gt; elements must have the following format.
+Each &lt;ul&gt; element with choices must have a "jsMultipleSelect" class.
+Each containing &lt;ul&gt; element must have a "jsMultipleSelectItem" class.
 
   Attributes:
 
@@ -53,9 +53,9 @@ Each containing &gt;li&lt; element must have a "jsMultipleSelectItem" class.
 
     #HMTL
 
-    <ul class="jsMultipleSelect" data-name="myInputFieldName" data-jsMultipleSelect="1">
-      <li class="filter"><input type="text" placeholder="Type here to filter"></li>
+    &lt;ul class="jsMultipleSelect" data-name="myInputFieldName" data-jsMultipleSelect="1"&gt;
+      &lt;li class="filter"&gt;&lt;input type="text" placeholder="Type here to filter"&gt;&lt;/li&gt;
 
-      <li class="jsMultipleSelectItem" data-value="myValue1">Value Name 1</li>
-      <li class="jsMultipleSelectItem" data-value="myValue2">Value Name 2</li>
-    </ul>
+      &lt;li class="jsMultipleSelectItem" data-value="myValue1"&gt;Value Name 1&lt;/li&gt;
+      &lt;li class="jsMultipleSelectItem" data-value="myValue2"&gt;Value Name 2&lt;/li&gt;
+    &lt;/ul&gt;
