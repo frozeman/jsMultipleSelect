@@ -11,7 +11,6 @@ The Javascript
 Add mootools core and the jsMultipleSelect.js to your website.
 The simplest way to use it is to just call
 
-    #JS
 
     window.addEvent('domready',function(){
 
@@ -19,11 +18,11 @@ The simplest way to use it is to just call
 
     });
 
+
 An have the right HTML in the page.
 
 If you want to customize it you can use the follwing options:
 
-    #JS
 
     window.addEvent('domready',function(){
 
@@ -34,6 +33,7 @@ If you want to customize it you can use the follwing options:
       });
 
     });
+
 
   - **options**
     - `highlightColor`  The color which will be used to highlight the selection destination when a element gets added.
@@ -51,6 +51,7 @@ You need at least one <i>option box</i> `<ul>` element with the class <b>"jsMult
 and one <i>destination box</i> `<ul>` element with the class <b>"jsMultipleSelectDestination"</b>.
 
 ### The <i>option boxes</i> `<ul>` elements
+
 
     <ul class="jsMultipleSelect" data-name="myInputFieldName" data-type="duplicates" data-jsMultipleSelect="1">
         <li class="filter"><input type="text" placeholder="Type here to filter"></li>
@@ -79,10 +80,12 @@ and one <i>destination box</i> `<ul>` element with the class <b>"jsMultipleSelec
 
 ### The <i>destination box</i> `<ul>` element
 
+
     <ul class="jsMultipleSelectDestination" data-jsMultipleSelect="1">
         <li data-value="myValue2" data-name="myInputFieldName"></li>
         <li data-value="myValue3" data-name="myInputFieldName"></li>
     </ul>
+
 
 **The `<ul>` element Attributes**
 - `data-jsMultipleSelect` the id which connects your <i>option box(es)</i> with your <i>destination box</i>.
