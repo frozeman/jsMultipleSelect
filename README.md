@@ -41,9 +41,9 @@ If you want to customize it you can use the follwing options:
     removeButtonClass: The class which will be add to the remove link
 
 
-The selection <ul> elements must have the following format.
-Each <ul> element with choices must have a "jsMultipleSelect" class.
-Each containing <li> element must have a "jsMultipleSelectItem" class.
+The selection &gt;ul&lt; elements must have the following format.
+Each &gt;ul&lt; element with choices must have a "jsMultipleSelect" class.
+Each containing &gt;li&lt; element must have a "jsMultipleSelectItem" class.
 
   Attributes:
 
