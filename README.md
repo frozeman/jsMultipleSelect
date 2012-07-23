@@ -43,14 +43,15 @@ If you want to customize it you can use the follwing options:
     - `removeButton`  The remove button which will be add to the all options in the destination box.
     <br>(default: `new Element('a',{'html':'&#215;'})`)
     - `removeButtonClass` The class which will be add to the remove button.
+    <br>(default: `remove`)
 
 
 ###  The HTML markup
 
-You need at least on options `<ul>` element with the class "jsMultipleSelect"<br>
-and one destination `<ul>` element with the class "jsMultipleSelectDestination".
+You need at least one <i>options</i> `<ul>` element with the class <i>"jsMultipleSelect"</i><br>
+and one <i>destination</i> `<ul>` element with the class <i>"jsMultipleSelectDestination"</i>.
 
-The options `<ul>` elements must have the following format.
+The <i>options</i> `<ul>` elements must have the following format.
 
     <ul class="jsMultipleSelect" data-name="myInputFieldName" data-type="duplicates" data-jsMultipleSelect="1">
         <li class="filter"><input type="text" placeholder="Type here to filter"></li>
