@@ -4,9 +4,19 @@ Creates a multiple selection where you can have multiple <i>option boxes</i> add
 You can also change the behavior of the <i>option boxes</i>:<br>
 remove the options after selecting, or be able to add options multiple times to the <i>destination box</i>.
 
-Published under the MIT-License.
+<b>Published under the MIT-License</b>.
 
 ![Screenshot](https://github.com/frozeman/jsMultipleSelect/raw/master/screenshot.png)
+
+It can look like this if you know how to style it right (Screenshot taken from feindura - Flat File CMS):
+
+![Screenshot 1](https://github.com/frozeman/jsMultipleSelect/raw/master/screenshotFancy.png)
+
+How to Use
+----------
+
+You need to call the jsMultipleSelect() class and add some HTML markup. Here is how:
+
 
 The Javascript
 --------------
@@ -14,7 +24,7 @@ The Javascript
 Add mootools core and the jsMultipleSelect.js to your website.<br>
 <b>The simplest way</b> to use it is to just call
 
-
+    #JS
     window.addEvent('domready',function(){
 
       new jsMultipleSelect();
@@ -26,7 +36,7 @@ An have the right HTML in the page.
 
 If you <b>want to customize</b> it you can use the follwing options:
 
-
+    #JS
     window.addEvent('domready',function(){
 
       new jsMultipleSelect({
@@ -74,7 +84,7 @@ and one <i>destination box</i> `<ul>` element with the class <b>"jsMultipleSelec
 
 ### The <i>option boxes</i> `<ul>` elements
 
-
+    #HTML
     <ul class="jsMultipleSelect" data-name="myInputFieldName" data-type="duplicates" data-jsMultipleSelect="1">
         <li class="filter"><input type="text" placeholder="Type here to filter"></li>
 
@@ -84,37 +94,43 @@ and one <i>destination box</i> `<ul>` element with the class <b>"jsMultipleSelec
     </ul>
 
 
-**The `<ul>` element Attributes**
-- `data-name` this is the name attribute which will be add to the hidden input fields, which are created when adding a selection to the <i>destination box</i>.
-- `data-jsMultipleSelect` the id which connects your <i>option box(es)</i> with your <i>destination box</i>.
-- `data-type`
-  - "remove" removes the <i>options</i> when selected.
-  - "duplicates" allows to add <i>options</i> multiple times to the <i>destination box</i>.
-  - don't add this attribute, if you want that the <i>options</i> stay in the box but can be added only once to the <i>destination box</i> (default).
+- **The `<ul>` element Attributes**
 
-**The `<li>` elements Attributes**
-- `data-value` the value which will be add to the hidden input fields, created when selecting this value.
-- `data-type` you can also add the data-type attribute only/also to the <i>option</i> `<li>` elements to specify their behavior.
+  - `data-name` this is the name attribute which will be add to the hidden input fields, which are created when adding a selection to the <i>destination box</i>.
+  - `data-jsMultipleSelect` the id which connects your <i>option box(es)</i> with your <i>destination box</i>.
+  - `data-type`
+    - "remove" removes the <i>options</i> when selected.
+    - "duplicates" allows to add <i>options</i> multiple times to the <i>destination box</i>.
+    - don't add this attribute, if you want that the <i>options</i> stay in the box but can be added only once to the <i>destination box</i> (default).
+
+- **The `<li>` elements Attributes**
+
+  - `data-value` the value which will be add to the hidden input fields, created when selecting this value.
+  - `data-type` you can also add the data-type attribute only/also to the <i>option</i> `<li>` elements to specify their behavior.
 
 <b>To add a Filter</b> add the follwoing `li` element to your <i>option boxes</i>: `<li class="filter"><input type="text" placeholder="Type here to filter"></li>`.
 
-<br>
+To customize, you can add what ever you want in the inner part of the `<li>` elements, like images and text elements. It will all be transfered to the <i>destination box</i> when the option is selected.
+
+![Screenshot 1](https://github.com/frozeman/jsMultipleSelect/raw/master/screenshotFancy.png)
+
+thistexthelpstomakealinbreakaftertheimage<br>
 
 ### The <i>destination box</i> `<ul>` element
 
-
+    #HTML
     <ul class="jsMultipleSelectDestination" data-jsMultipleSelect="1">
         <li data-value="myValue2" data-name="myInputFieldName"></li>
         <li data-value="myValue3" data-name="myInputFieldName"></li>
     </ul>
 
 
-**The `<ul>` element Attributes**
-- `data-jsMultipleSelect` the id which connects your <i>option box(es)</i> with your <i>destination box</i>.
+- **The `<ul>` element Attributes**
+  - `data-jsMultipleSelect` the id which connects your <i>option box(es)</i> with your <i>destination box</i>.
 
-**The `<li>` elements Attributes**
-- `data-value` the value which the already selected <i>option</i> will have.
-- `data-name` the name attribute of the input field which this <i>option</i> has.
+- **The `<li>` elements Attributes**
+  - `data-value` the value which the already selected <i>option</i> will have.
+  - `data-name` the name attribute of the input field which this <i>option</i> has.
 
 
 The Output
@@ -122,6 +138,7 @@ The Output
 
 If you're wrapping the above elements with a `<form>` element and send this form to a PHP site you get the following `$_POST/$_GET` array: (example)
 
+    #PHP
     Array
     (
     ['myInputFieldName'] => Array

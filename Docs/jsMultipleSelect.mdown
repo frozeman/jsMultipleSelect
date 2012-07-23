@@ -7,7 +7,7 @@ The Javascript
 Add mootools core and the jsMultipleSelect.js to your website.<br>
 <b>The simplest way</b> to use it is to just call
 
-
+    #JS
     window.addEvent('domready',function(){
 
       new jsMultipleSelect();
@@ -19,7 +19,7 @@ An have the right HTML in the page.
 
 If you <b>want to customize</b> it you can use the follwing options:
 
-
+    #JS
     window.addEvent('domready',function(){
 
       new jsMultipleSelect({
@@ -31,13 +31,32 @@ If you <b>want to customize</b> it you can use the follwing options:
     });
 
 
-  - **options**
-    - `highlightColor`  The color which will be used to highlight the selection destination when a element gets added.
-    <br>(default: `#cedee6`)
-    - `removeButton`  The remove button which will be add to the all options in the destination box.
-    <br>(default: `new Element('a',{'html':'&#215;'})`)
-    - `removeButtonClass` The class which will be add to the remove button.
-    <br>(default: `remove`)
+- **Options**
+
+  - `highlightColor`  The color which will be used to highlight the selection destination when a element gets added
+  <br>(default: `#cedee6`)
+  - `removeButton`  The remove button which will be add to the all options in the <i>destination box</i>
+  <br>(default: `new Element('a',{'html':'&#215;'})`)
+  - `removeButtonClass` The class which will be add to the remove button
+  <br>(default: `remove`)
+
+- **Events**
+
+  - `select` will be fired on the <i>destination box</i> when an <i>option</i> is selected.
+    The event function will get the following parameters:
+      - `value` the value of the selected <i>option</i>
+      - `name` the name of the input field of the selected <i>option</i>
+      - `option` a reference to the `<li>` element in the <i>option box</i>
+      - `clone` a reference to the `<li>` element in the <i>destination box</i>
+      - `optionBox` a reference to the <i>option box</i> where the option was coming from
+
+  - `parsed` will be fired on the <i>destination box</i> when the predefined selections inside the <i>destination box</i> are parsed. (You have to add a Eventlistener to the <i>destination box</i> BEFORE you call the <i>jsMultipleSelect</i> class, otherwise you won't catch the event)
+    The event function will get the following parameters:
+      - `value` the value of the selected <i>option</i>
+      - `name` the name of the input field of the selected <i>option</i>
+      - `option` a reference to the `<li>` element in the <i>option box</i>
+      - `clone` a reference to the `<li>` element in the <i>destination box</i>
+      - `optionBox` a reference to the <i>option box</i> where the option was coming from
 
 
 The HTML markup
@@ -48,7 +67,7 @@ and one <i>destination box</i> `<ul>` element with the class <b>"jsMultipleSelec
 
 ### The <i>option boxes</i> `<ul>` elements
 
-
+    #HTML
     <ul class="jsMultipleSelect" data-name="myInputFieldName" data-type="duplicates" data-jsMultipleSelect="1">
         <li class="filter"><input type="text" placeholder="Type here to filter"></li>
 
@@ -58,34 +77,40 @@ and one <i>destination box</i> `<ul>` element with the class <b>"jsMultipleSelec
     </ul>
 
 
-**The `<ul>` element Attributes**
-- `data-name` this is the name attribute which will be add to the hidden input fields, which are created when adding a selection to the <i>destination box</i>.
-- `data-jsMultipleSelect` the id which connects your <i>option box(es)</i> with your <i>destination box</i>.
-- `data-type`
-  - "remove" removes the <i>options</i> when selected.
-  - "duplicates" allows to add <i>options</i> multiple times to the <i>destination box</i>.
-  - don't add this attribute, if you want that the <i>options</i> stay in the box but can be added only once to the <i>destination box</i> (default).
+- **The `<ul>` element Attributes**
 
-**The `<li>` elements Attributes**
-- `data-value` the value which will be add to the hidden input fields, created when selecting this value.
-- `data-type` you can also add the data-type attribute only/also to the <i>option</i> `<li>` elements to specify their behavior.
+  - `data-name` this is the name attribute which will be add to the hidden input fields, which are created when adding a selection to the <i>destination box</i>.
+  - `data-jsMultipleSelect` the id which connects your <i>option box(es)</i> with your <i>destination box</i>.
+  - `data-type`
+    - "remove" removes the <i>options</i> when selected.
+    - "duplicates" allows to add <i>options</i> multiple times to the <i>destination box</i>.
+    - don't add this attribute, if you want that the <i>options</i> stay in the box but can be added only once to the <i>destination box</i> (default).
+
+- **The `<li>` elements Attributes**
+
+  - `data-value` the value which will be add to the hidden input fields, created when selecting this value.
+  - `data-type` you can also add the data-type attribute only/also to the <i>option</i> `<li>` elements to specify their behavior.
 
 <b>To add a Filter</b> add the follwoing `li` element to your <i>option boxes</i>: `<li class="filter"><input type="text" placeholder="Type here to filter"></li>`.
+
+To customize, you can add what ever you want in the inner part of the `<li>` elements, like images and text elements. It will all be transfered to the <i>destination box</i> when the option is selected.
+
+![Screenshot 1](https://github.com/frozeman/jsMultipleSelect/raw/master/screenshotFancy.png)
 
 <br>
 
 ### The <i>destination box</i> `<ul>` element
 
-
+    #HTML
     <ul class="jsMultipleSelectDestination" data-jsMultipleSelect="1">
         <li data-value="myValue2" data-name="myInputFieldName"></li>
         <li data-value="myValue3" data-name="myInputFieldName"></li>
     </ul>
 
 
-**The `<ul>` element Attributes**
-- `data-jsMultipleSelect` the id which connects your <i>option box(es)</i> with your <i>destination box</i>.
+- **The `<ul>` element Attributes**
+  - `data-jsMultipleSelect` the id which connects your <i>option box(es)</i> with your <i>destination box</i>.
 
-**The `<li>` elements Attributes**
-- `data-value` the value which the already selected <i>option</i> will have.
-- `data-name` the name attribute of the input field which this <i>option</i> has.
+- **The `<li>` elements Attributes**
+  - `data-value` the value which the already selected <i>option</i> will have.
+  - `data-name` the name attribute of the input field which this <i>option</i> has.
