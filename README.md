@@ -39,9 +39,9 @@ If you want to customize it you can use the follwing options:
 
   - options:
 
-    highlightColor:  The color which will be used to highlight the selection destination when a element gets added (default: "#cedee6")
-    removeButton:  The remove link which will be add to the all selected item (default: "new Element('a',{'html':'&#215;'})")
-    removeButtonClass: The class which will be add to the remove link
+highlightColor:  The color which will be used to highlight the selection destination when a element gets added (default: "#cedee6")
+removeButton:  The remove link which will be add to the all selected item (default: "new Element('a',{'html':'&#215;'})")
+removeButtonClass: The class which will be add to the remove link
 
 
 ###  The HTML markup
@@ -58,8 +58,6 @@ Each containing &lt;ul&gt; element must have a "jsMultipleSelectItem" class.
   - data-name: this is the name aatribute you inputs will get to post and array through the form, when submited
   - data-jsMultipleSelect: the id of your selections, to connect option box(es) and selection destination. Each pair of option box(es) and destination must have a unique id.
   - data-value: each li must have this attribute, which contains the value which the created input will get
-
-      #HMTL
 
       &lt;ul class="jsMultipleSelect" data-name="myInputFieldName" data-jsMultipleSelect="1"&gt;
         &lt;li class="filter"&gt;&lt;input type="text" placeholder="Type here to filter"&gt;&lt;/li&gt;
