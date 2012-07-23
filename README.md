@@ -9,7 +9,7 @@ The Javascript
 --------------
 
 Add mootools core and the jsMultipleSelect.js to your website.
-The simplest way to use it is to just call
+<b>The simplest way</b> to use it is to just call
 
 
     window.addEvent('domready',function(){
@@ -21,7 +21,7 @@ The simplest way to use it is to just call
 
 An have the right HTML in the page.
 
-If you want to customize it you can use the follwing options:
+If you <b>want to customize</b> it you can use the follwing options:
 
 
     window.addEvent('domready',function(){
