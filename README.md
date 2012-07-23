@@ -48,8 +48,8 @@ If you want to customize it you can use the follwing options:
 
 ###  The HTML markup
 
-You need at least one <i>options</i> `<ul>` element with the class <b>"jsMultipleSelect"</b><br>
-and one <i>destination</i> `<ul>` element with the class <b>"jsMultipleSelectDestination"</b>.
+You need at least one <i>option box</i> `<ul>` element with the class <b>"jsMultipleSelect"</b><br>
+and one <i>destination box</i> `<ul>` element with the class <b>"jsMultipleSelectDestination"</b>.
 
 **The <i>option boxes</i> `<ul>` elements**
 
@@ -62,7 +62,7 @@ and one <i>destination</i> `<ul>` element with the class <b>"jsMultipleSelectDes
     </ul>
 
 
-**The `<ul>` element Attributes**
+The `<ul>` element Attributes
 - `data-name` this is the name attribute which will be add to the hidden input fields, which are created when adding a selection to the <i>destination box</i>.
 - `data-jsMultipleSelect` the id which connects your <i>option box(es)</i> with your <i>destination box</i>.
 - `data-type`
@@ -70,7 +70,7 @@ and one <i>destination</i> `<ul>` element with the class <b>"jsMultipleSelectDes
   - "duplicates" allows to add <i>options</i> multiple times to the <i>destination box</i>.
   - don't add this attribute, if you want that the <i>options</i> stay in the box but can be added only once to the <i>destination box</i> (default).
 
-**The `<li>` elements Attributes**
+The `<li>` elements Attributes
 - `data-value` the value which will be add to the hidden input fields, created when selecting this value.
 - `data-type` you can also add the data-type attribute only/also to the <i>option</i> `<li>` elements to specify their behavior.
 
@@ -84,10 +84,10 @@ You can add the follwoing `li` element to add a filter input: `<li class="filter
         <li data-value="myValue3" data-name="myInputFieldName"></li>
     </ul>
 
-**The `<ul>` element Attributes**
+The `<ul>` element Attributes
 - `data-jsMultipleSelect` the id which connects your <i>option box(es)</i> with your <i>destination box</i>.
 
-**The `<li>` elements Attributes**
+The `<li>` elements Attributes
 - `data-value` the value which the already selected <i>option</i> will have.
 - `data-name` the name attribute of the input field which this <i>option</i> has.
 
