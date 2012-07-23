@@ -7,6 +7,9 @@ You can also change the behavior of the option boxes: remove the options after s
 
 How to use
 ----------
+
+###  The Javascript
+
 Add mootools core and the jsMultipleSelect.js to your website.
 The simplest way to use it is to just call
 
