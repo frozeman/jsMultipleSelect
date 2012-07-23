@@ -59,9 +59,12 @@ Each containing &lt;ul&gt; element must have a "jsMultipleSelectItem" class.
   - data-jsMultipleSelect: the id of your selections, to connect option box(es) and selection destination. Each pair of option box(es) and destination must have a unique id.
   - data-value: each li must have this attribute, which contains the value which the created input will get
 
+    <code>
       &lt;ul class="jsMultipleSelect" data-name="myInputFieldName" data-jsMultipleSelect="1"&gt;
         &lt;li class="filter"&gt;&lt;input type="text" placeholder="Type here to filter"&gt;&lt;/li&gt;
 
         &lt;li class="jsMultipleSelectItem" data-value="myValue1"&gt;Value Name 1&lt;/li&gt;
         &lt;li class="jsMultipleSelectItem" data-value="myValue2"&gt;Value Name 2&lt;/li&gt;
       &lt;/ul&gt;
+      
+    </code>
