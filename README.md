@@ -95,4 +95,16 @@ and one <i>destination box</i> `<ul>` element with the class <b>"jsMultipleSelec
 - `data-name` the name attribute of the input field which this <i>option</i> has.
 
 
+The Output
+---------------
 
+If you're wrapping these elements with a `<form>` element and send this form to a PHP site you get the following `$_POST` array:
+
+    Array
+    (
+    ['myInputFieldName'] => Array
+        (
+            [0] => 'myValue2'
+            [1] => 'myValue3'
+        )
+    )
