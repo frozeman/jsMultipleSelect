@@ -39,31 +39,40 @@ If you want to customize it you can use the follwing options:
 
   - options:
 
-highlightColor:  The color which will be used to highlight the selection destination when a element gets added (default: "#cedee6")
-removeButton:  The remove link which will be add to the all selected item (default: "new Element('a',{'html':'&#215;'})")
-removeButtonClass: The class which will be add to the remove link
+highlightColor:  The color which will be used to highlight the selection destination when a element gets added (default: `#cedee6`)
+removeButton:  The remove link which will be add to the all selected item (default: `new Element('a',{'html':'&#215;'})`)
+removeButtonClass: The class which will be add to the remove link.
 
 
 ###  The HTML markup
 
-You need at least on &lt;ul&gt; element with the class "jsMultipleSelect"<br>
-and one with the class "jsMultipleSelectDestination"
+You need at least on options `<ul>` element with the class "jsMultipleSelect"<br>
+and one destination `<ul>` element with the class "jsMultipleSelectDestination".
 
-The selection `&lt;ul&gt;` elements must have the following format.
-Each &lt;ul&gt; element with choices must have a "jsMultipleSelect" class.
-Each containing `&lt;ul&gt;` element must have a "jsMultipleSelectItem" class.
+The options `<ul>` elements must have the following format.
 
-  Attributes:
-
-  - data-name: this is the name aatribute you inputs will get to post and array through the form, when submited
-  - data-jsMultipleSelect: the id of your selections, to connect option box(es) and selection destination. Each pair of option box(es) and destination must have a unique id.
-  - data-value: each li must have this attribute, which contains the value which the created input will get
-
-text
-
-    <ul class="jsMultipleSelect" data-name="myInputFieldName" data-jsMultipleSelect="1">
-        <li class="filter"&gt;&lt;input type="text" placeholder="Type here to filter"></li>
+    <ul class="jsMultipleSelect" data-name="myInputFieldName" data-type="duplicates" data-jsMultipleSelect="1">
+        <li class="filter"><input type="text" placeholder="Type here to filter"></li>
 
         <li class="jsMultipleSelectItem" data-value="myValue1">Value Name 1></li>
         <li class="jsMultipleSelectItem" data-value="myValue2">Value Name 2></li>
+        <li class="jsMultipleSelectItem" data-value="myValue3" data-type="remove">Removeable Value Name 3></li>
     </ul>
+
+**Attributes**
+
+The `<ul>` element
+- `data-name` this is the name attribute which the hidden input fiels will get which are created when adding a selection to the destination box.
+- `data-jsMultipleSelect` the id which connect your option boxes with a destination box.
+- `data-type`
+  - "remove" removes the options when selected.
+  - "duplicates" allows to add options multiple times to the destination box.
+  - don't add this attribute, if you want that the options stay in the box but can be added only once to the destination box (default).
+
+The `<li>` elements
+- `data-value` the value which will be add to the hidden input field created when selecting this value.
+- `data-type` you can also add the data-type attribute only or also to the `<li>` elements to specify their behavior.
+
+You can add the follwoing `li` element to add a filter input: `<li class="filter"><input type="text" placeholder="Type here to filter"></li>`.
+
+
