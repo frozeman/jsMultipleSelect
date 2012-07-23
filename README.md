@@ -98,7 +98,7 @@ and one <i>destination box</i> `<ul>` element with the class <b>"jsMultipleSelec
 The Output
 ---------------
 
-If you're wrapping these elements with a `<form>` element and send this form to a PHP site you get the following `$_POST/$_GET` example array:
+If you're wrapping the above elements with a `<form>` element and send this form to a PHP site you get the following `$_POST/$_GET` array: (example)
 
     Array
     (
