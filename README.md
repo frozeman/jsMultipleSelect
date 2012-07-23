@@ -38,11 +38,11 @@ If you want to customize it you can use the follwing options:
     });
 
   - **options**
-    - highlightColor:  The color which will be used to highlight the selection destination when a element gets added.
+    - `highlightColor`  The color which will be used to highlight the selection destination when a element gets added.
     <br>(default: `#cedee6`)
-    - removeButton:  The remove button which will be add to the all options in the destination box.
+    - `removeButton`  The remove button which will be add to the all options in the destination box.
     <br>(default: `new Element('a',{'html':'&#215;'})`)
-    - removeButtonClass: The class which will be add to the remove button.
+    - `removeButtonClass` The class which will be add to the remove button.
 
 
 ###  The HTML markup
