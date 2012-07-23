@@ -46,12 +46,10 @@ If you want to customize it you can use the follwing options:
     <br>(default: `remove`)
 
 
-
-
 ###  The HTML markup
 
-You need at least one <i>options</i> `<ul>` element with the class <i>"jsMultipleSelect"</i><br>
-and one <i>destination</i> `<ul>` element with the class <i>"jsMultipleSelectDestination"</i>.
+You need at least one <i>options</i> `<ul>` element with the class <b>"jsMultipleSelect"</b><br>
+and one <i>destination</i> `<ul>` element with the class <b>"jsMultipleSelectDestination"</b>.
 
 **The <i>option boxes</i> `<ul>` elements**
 
