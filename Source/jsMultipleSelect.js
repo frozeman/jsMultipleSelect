@@ -144,7 +144,7 @@ var jsMultipleSelect = new Class({
               }
 
               // fire event
-              dropBox.fireEvent('select',[value,name,item,item.getParent('ul.jsMultipleSelect')]);
+              dropBox.fireEvent('select',[value,name,item,injectItem,jsMultipleSelect]);
             }
           });
       });
@@ -184,7 +184,7 @@ var jsMultipleSelect = new Class({
           }
 
           // fire event
-          dropBox.fireEvent('add',[value,name,item,item.getParent('ul.jsMultipleSelect')]);
+          dropBox.fireEvent('parsed',[value,name,item,injectItem,jsMultipleSelect]);
         }
       });
 

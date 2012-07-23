@@ -13,35 +13,43 @@
 
             // Event get fired when the predefined selections are parsed
             // (see in the ul.jsMultipleSelectDestination below)
-            $$('ul.jsMultipleSelectDestination').addEvent('add',function(value,name,item,optionBox){
-
-                // uncomment these lines to see the event output
-                console.log(value);
-                console.log(name);
-                console.log(item);
-                console.log(optionBox);
-            });
-
-            new jsMultipleSelect({highlightColor: '#fff'});
-
-            // Event get fired when you select an option
-            $$('ul.jsMultipleSelectDestination').addEvent('select',function(value,name,item,optionBox){
+            $$('ul.jsMultipleSelectDestination').addEvent('parsed',function(value,name,option,clone,optionBox){
 
                 // uncomment these lines to see the event output
                 // console.log(value);
                 // console.log(name);
-                // console.log(item);
+                // console.log(option);
+                // console.log(clone);
+                // console.log(optionBox);
+            });
+
+
+            new jsMultipleSelect({highlightColor: '#fff'});
+
+
+            // Event get fired when you select an option
+            $$('ul.jsMultipleSelectDestination').addEvent('select',function(value,name,option,clone,optionBox){
+
+                // uncomment these lines to see the event output
+                // console.log(value);
+                // console.log(name);
+                // console.log(option);
+                // console.log(clone);
                 // console.log(optionBox);
             });
         });
     </script>
 </head>
 <body>
+
+    <h1>jsMultipleSelect Demo</h1>
+
+
     <form action="output.php" method="post">
 
         <div class="firstSelection">
             <div class="left">
-                <h2>Keeps Items (default)</h2>
+                <h2>Keeps Options (default)</h2>
                 <ul class="jsMultipleSelect" data-jsMultipleSelect="1" data-name="thingsToHave">
                     <li class="filter"><input type="text" placeholder="Type here to filter"></li>
 
@@ -53,7 +61,7 @@
                 </ul>
             </div>
             <div class="right">
-                <h2>Removes Items</h2>
+                <h2>Removes Options</h2>
                 <ul class="jsMultipleSelect" data-jsMultipleSelect="1" data-type="remove" data-name="ingredients">
                     <li class="filter"><input type="text" placeholder="Type here to filter"></li>
 
@@ -77,16 +85,16 @@
 
         <div class="secondSelection">
             <div class="left">
-                <h2>Keeps Items and allows adding duplicates<br>(and no filter)</h2>
+                <h2>Keeps Options and allows adding duplicates<br>(and no filter)</h2>
                 <ul class="jsMultipleSelect" data-jsMultipleSelect="2" data-type="duplicates" data-name="foodToEat">
                     <li class="jsMultipleSelectItem" data-value="veggieBurger">Veggie Burger</li>
-                    <li class="jsMultipleSelectItem" data-value="blueCheese" data-type="remove">Blue Cheese</li>
+                    <li class="jsMultipleSelectItem" data-value="blueCheese" data-type="remove">Blue Cheese (gets removed)</li>
                     <li class="jsMultipleSelectItem" data-value="tomatoSalad">Tomato Salad</li>
                     <li class="jsMultipleSelectItem" data-value="Beans">Backed Beans</li>
                 </ul>
             </div>
             <div class="right">
-                <h2>Destination Box<br>(With predefined selections)</h2>
+                <h2>Destination Box<br>(With predefined Selections)</h2>
                 <ul class="jsMultipleSelectDestination" data-jsMultipleSelect="2">
                     <li data-value="veggieBurger" data-name="foodToEat"></li>
                     <li data-value="tomatoSalad" data-name="foodToEat"></li>

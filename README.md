@@ -37,6 +37,7 @@ If you <b>want to customize</b> it you can use the follwing options:
 
 
 - **Options**
+
   - `highlightColor`  The color which will be used to highlight the selection destination when a element gets added
   <br>(default: `#cedee6`)
   - `removeButton`  The remove button which will be add to the all options in the <i>destination box</i>
@@ -45,18 +46,23 @@ If you <b>want to customize</b> it you can use the follwing options:
   <br>(default: `remove`)
 
 - **Events**
+
   - `select` will be fired on the <i>destination box</i> when an <i>option</i> is selected.
     The event function will get the following parameters:
       - `value` the value of the selected <i>option</i>
       - `name` the name of the input field of the selected <i>option</i>
-      - `item` a reference to the `<li>` element in the <i>option box</i>
-      - `optionBox` a reference to the <i>option box</i> `<ul>` element
-  - `add` will be fired on the <i>destination box</i> the predefined selections inside the <i>destination box</i> are parsed.
+      - `option` a reference to the `<li>` element in the <i>option box</i>
+      - `clone` a reference to the `<li>` element in the <i>destination box</i>
+      - `optionBox` a reference to the <i>option box</i> where the option was coming from
+
+  - `parsed` will be fired on the <i>destination box</i> when the predefined selections inside the <i>destination box</i> are parsed. (You have to add a Eventlistener to the <i>destination box</i> BEFORE you call the <i>jsMultipleSelect</i> class, otherwise you won't catch the event)
     The event function will get the following parameters:
       - `value` the value of the selected <i>option</i>
       - `name` the name of the input field of the selected <i>option</i>
-      - `item` a reference to the `<li>` element in the <i>option box</i>
-      - `optionBox` a reference to the <i>option box</i> `<ul>` element
+      - `option` a reference to the `<li>` element in the <i>option box</i>
+      - `clone` a reference to the `<li>` element in the <i>destination box</i>
+      - `optionBox` a reference to the <i>option box</i> where the option was coming from
+
 
 The HTML markup
 ---------------
