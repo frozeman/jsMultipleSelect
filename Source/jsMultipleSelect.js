@@ -9,7 +9,7 @@ authors:
 - Fabian Vogelsteller [frozeman.de]
 
 requires:
-- core/1.4: [Class]
+- core/1.4: [Class,Options,Events]
 
 provides: [jsMultipleSelect]
 
@@ -142,6 +142,9 @@ var jsMultipleSelect = new Class({
                 removedItems.push(item);
                 item.setStyle('display','none');
               }
+
+              // fire event
+              dropBox.fireEvent('select',[value,name,item,item.getParent('ul.jsMultipleSelect')]);
             }
           });
       });
@@ -179,6 +182,9 @@ var jsMultipleSelect = new Class({
             removedItems.push(item);
             item.setStyle('display','none');
           }
+
+          // fire event
+          dropBox.fireEvent('add',[value,name,item,item.getParent('ul.jsMultipleSelect')]);
         }
       });
 

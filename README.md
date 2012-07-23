@@ -36,14 +36,27 @@ If you <b>want to customize</b> it you can use the follwing options:
     });
 
 
-  - **options**
-    - `highlightColor`  The color which will be used to highlight the selection destination when a element gets added.
-    <br>(default: `#cedee6`)
-    - `removeButton`  The remove button which will be add to the all options in the destination box.
-    <br>(default: `new Element('a',{'html':'&#215;'})`)
-    - `removeButtonClass` The class which will be add to the remove button.
-    <br>(default: `remove`)
+- **Options**
+  - `highlightColor`  The color which will be used to highlight the selection destination when a element gets added
+  <br>(default: `#cedee6`)
+  - `removeButton`  The remove button which will be add to the all options in the <i>destination box</i>
+  <br>(default: `new Element('a',{'html':'&#215;'})`)
+  - `removeButtonClass` The class which will be add to the remove button
+  <br>(default: `remove`)
 
+- **Events**
+  - `select` will be fired on the <i>destination box</i> when an <i>option</i> is selected.
+    The event function will get the following parameters:
+    - `value` the value of the selected <i>option</i>
+    - `name` the name of the input field of the selected <i>option</i>
+    - `item` a reference to the `<li>` element in the <i>option box</i>
+    - `optionBox` a reference to the <i>option box</i> `<ul>` element
+  - `add` will be fired on the <i>destination box</i> the predefined selections inside the <i>destination box</i> are parsed.
+    The event function will get the following parameters:
+    - `value` the value of the selected <i>option</i>
+    - `name` the name of the input field of the selected <i>option</i>
+    - `item` a reference to the `<li>` element in the <i>option box</i>
+    - `optionBox` a reference to the <i>option box</i> `<ul>` element
 
 The HTML markup
 ---------------

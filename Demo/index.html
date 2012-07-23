@@ -10,7 +10,29 @@
     <script type="text/javascript" src="../Source/jsMultipleSelect.js"></script>
     <script type="text/javascript">
         window.addEvent('domready',function(){
+
+            // Event get fired when the predefined selections are parsed
+            // (see in the ul.jsMultipleSelectDestination below)
+            $$('ul.jsMultipleSelectDestination').addEvent('add',function(value,name,item,optionBox){
+
+                // uncomment these lines to see the event output
+                console.log(value);
+                console.log(name);
+                console.log(item);
+                console.log(optionBox);
+            });
+
             new jsMultipleSelect({highlightColor: '#fff'});
+
+            // Event get fired when you select an option
+            $$('ul.jsMultipleSelectDestination').addEvent('select',function(value,name,item,optionBox){
+
+                // uncomment these lines to see the event output
+                // console.log(value);
+                // console.log(name);
+                // console.log(item);
+                // console.log(optionBox);
+            });
         });
     </script>
 </head>
