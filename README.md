@@ -3,7 +3,7 @@ jsMultipleSelect
 Creates a multiple selection where you can have multiple choice boxes beeing add to one selection.
 You can set that the choices are removed after selection, or that you can select one choice multiple times.
 
-![Screenshot](https://github.com/frozeman/jsMultipleSelect/blob/master/screenshot.png)
+![Screenshot](https://github.com/frozeman/jsMultipleSelect/raw/master/screenshot.png)
 
 How to use
 ----------
