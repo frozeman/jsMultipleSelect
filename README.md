@@ -1,7 +1,8 @@
 jsMultipleSelect
 ================
-Creates a multiple selection where you can have multiple option boxes selecting into one destination.<br>
-You can also change the behavior of the option boxes: remove the options after selecting, or be able to add options multiple times to the selection.
+Creates a multiple selection where you can have multiple <i>option boxes</i> adding values into one <i>destination box</i>.<br>
+You can also change the behavior of the <i>option boxes</i>:<br>
+remove the options after selecting, or be able to add options multiple times to the <i>destination box</i>.
 
 ![Screenshot](https://github.com/frozeman/jsMultipleSelect/raw/master/screenshot.png)
 

@@ -1,7 +1,7 @@
 /*
 ---
-description: Creates a multiple selection where you can have multiple choice boxes beeing add to one selection.
-You can set that the choices are removed after selection, or that you can select one choice multiple times.
+description: Creates a multiple selection where you can have multiple option boxes adding values into one destination box.
+You can also change the behavior of the option boxes: remove the options after selecting, or be able to add options multiple times to the destination box.
 
 license: MIT-License
 
@@ -9,7 +9,7 @@ authors:
 - Fabian Vogelsteller [frozeman.de]
 
 requires:
-- core/1.3: [Class]
+- core/1.4: [Class]
 
 provides: [jsMultipleSelect]
 
