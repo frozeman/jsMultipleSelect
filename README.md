@@ -3,7 +3,7 @@ jsMultipleSelect
 Creates a multiple selection where you can have multiple choice boxes beeing add to one selection.
 You can set that the choices are removed after selection, or that you can select one choice multiple times.
 
-![Screenshot](http://devthought.com/wp-content/uploads/2009/04/picture-1.png)
+![Screenshot](screenshot.png)
 
 How to use
 ----------
@@ -20,7 +20,7 @@ The simplest way to use it is to just call
 
 An have the right HTML in the page.
 
-If you want to customize it you can 
+If you want to customize it you can use the follwing options:
 
     #JS
 
