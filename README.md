@@ -46,12 +46,14 @@ If you want to customize it you can use the follwing options:
     <br>(default: `remove`)
 
 
+
+
 ###  The HTML markup
 
 You need at least one <i>options</i> `<ul>` element with the class <i>"jsMultipleSelect"</i><br>
 and one <i>destination</i> `<ul>` element with the class <i>"jsMultipleSelectDestination"</i>.
 
-The <i>options</i> `<ul>` elements must have the following format.
+**The <i>option boxes</i> `<ul>` elements**
 
     <ul class="jsMultipleSelect" data-name="myInputFieldName" data-type="duplicates" data-jsMultipleSelect="1">
         <li class="filter"><input type="text" placeholder="Type here to filter"></li>
@@ -63,17 +65,33 @@ The <i>options</i> `<ul>` elements must have the following format.
 
 
 **The `<ul>` element Attributes**
-- `data-name` this is the name attribute which the hidden input fiels will get which are created when adding a selection to the destination box.
-- `data-jsMultipleSelect` the id which connect your option boxes with a destination box.
+- `data-name` this is the name attribute which will be add to the hidden input fields, which are created when adding a selection to the <i>destination box</i>.
+- `data-jsMultipleSelect` the id which connects your <i>option box(es)</i> with your <i>destination box</i>.
 - `data-type`
-  - "remove" removes the options when selected.
-  - "duplicates" allows to add options multiple times to the destination box.
-  - don't add this attribute, if you want that the options stay in the box but can be added only once to the destination box (default).
+  - "remove" removes the <i>options</i> when selected.
+  - "duplicates" allows to add <i>options</i> multiple times to the <i>destination box</i>.
+  - don't add this attribute, if you want that the <i>options</i> stay in the box but can be added only once to the <i>destination box</i> (default).
 
 **The `<li>` elements Attributes**
-- `data-value` the value which will be add to the hidden input field created when selecting this value.
-- `data-type` you can also add the data-type attribute only or also to the `<li>` elements to specify their behavior.
+- `data-value` the value which will be add to the hidden input fields, created when selecting this value.
+- `data-type` you can also add the data-type attribute only/also to the <i>option</i> `<li>` elements to specify their behavior.
 
 You can add the follwoing `li` element to add a filter input: `<li class="filter"><input type="text" placeholder="Type here to filter"></li>`.
+
+
+**The <i>destination box</i> `<ul>` element**
+
+    <ul class="jsMultipleSelectDestination" data-jsMultipleSelect="1">
+        <li data-value="myValue2" data-name="myInputFieldName"></li>
+        <li data-value="myValue3" data-name="myInputFieldName"></li>
+    </ul>
+
+**The `<ul>` element Attributes**
+- `data-jsMultipleSelect` the id which connects your <i>option box(es)</i> with your <i>destination box</i>.
+
+**The `<li>` elements Attributes**
+- `data-value` the value which the already selected <i>option</i> will have.
+- `data-name` the name attribute of the input field which this <i>option</i> has.
+
 
 
