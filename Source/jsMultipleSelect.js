@@ -33,7 +33,7 @@ var jsMultipleSelect = new Class({
     this.options.removeButton.setStyle('cursor','pointer');
 
     self.selections = $$('.jsMultipleSelect');
-    self.selectionDropBoxes = $$('.jsMultipleSelectDropBox');
+    self.selectionDropBoxes = $$('.jsMultipleSelectDestination');
 
     // GO THROUGH ALL SELECTIONS
     self.selections.each(function(jsMultipleSelect){
@@ -97,7 +97,7 @@ var jsMultipleSelect = new Class({
           // item can be add multiple times
           item.store('duplicate',(item.getProperty('data-type') === 'duplicates' || item.getParent('ul.jsMultipleSelect').getProperty('data-type') === 'duplicates'));
 
-          // create clone, which will be add to the ul.jsMultipleSelectDropBox
+          // create clone, which will be add to the ul.jsMultipleSelectDestination
           var clone = item.clone();
           clone.setStyle('cursor','auto');
 
@@ -147,7 +147,7 @@ var jsMultipleSelect = new Class({
       });
 
 
-      // PARSE already SELECTED ITEMS (which are in the jsMultipleSelectDropBox)
+      // PARSE already SELECTED ITEMS (which are in the jsMultipleSelectDestination)
       dropBox.getChildren('li').each(function(selected){
         var value = selected.getProperty('data-value');
         var item = jsMultipleSelect.getChildren('li.jsMultipleSelectItem[data-value="'+value+'"]');

@@ -7,7 +7,7 @@
 
 /* Layout of the SELECTION BOXES */
 ul.jsMultipleSelect,
-ul.jsMultipleSelectDropBox {
+ul.jsMultipleSelectDestination {
     position: relative;
     margin: 0;
     padding: 3px 5px;
@@ -29,7 +29,7 @@ ul.jsMultipleSelectDropBox {
 
 /* each SELECT ITEM */
 ul.jsMultipleSelect li.jsMultipleSelectItem,
-ul.jsMultipleSelectDropBox li.jsMultipleSelectItem {
+ul.jsMultipleSelectDestination li.jsMultipleSelectItem {
     position: relative;
     margin: 3px 0;
     padding: 3px 5px;
@@ -44,13 +44,13 @@ ul.jsMultipleSelectDropBox li.jsMultipleSelectItem {
     -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
 }
 ul.jsMultipleSelect li.jsMultipleSelectItem:hover,
-ul.jsMultipleSelectDropBox li.jsMultipleSelectItem:hover {
+ul.jsMultipleSelectDestination li.jsMultipleSelectItem:hover {
     background-color: #c7d7fa;
 }
 
 /* the FILTER input */
 ul.jsMultipleSelect li.filter input,
-ul.jsMultipleSelectDropBox li.filter input {
+ul.jsMultipleSelectDestination li.filter input {
     width: 93.5%;
     margin-left: -4px;
     margin-top: -2px;
@@ -69,7 +69,7 @@ ul.jsMultipleSelectDropBox li.filter input {
 }
 /* the FILTER CANCEL BUTTON */
 ul.jsMultipleSelect li.filter a.remove,
-ul.jsMultipleSelectDropBox li.filter a.close {
+ul.jsMultipleSelectDestination li.filter a.close {
     position: absolute;
     top: 3px;
     right: 8px;
@@ -80,18 +80,18 @@ ul.jsMultipleSelectDropBox li.filter a.close {
 }
 
 /* the SELECTION DROP BOX (DESTINATION BOX) */
-ul.jsMultipleSelectDropBox {
+ul.jsMultipleSelectDestination {
     max-height: 350px;
     min-height: 150px;
     background-color: #f6f7fc;
 }
-ul.jsMultipleSelectDropBox li.jsMultipleSelectItem:hover {
+ul.jsMultipleSelectDestination li.jsMultipleSelectItem:hover {
     background-color: #fff;
 }
-ul.jsMultipleSelectDropBox li.jsMultipleSelectItem span {
+ul.jsMultipleSelectDestination li.jsMultipleSelectItem span {
     color: #82a5f6;
 }
-ul.jsMultipleSelectDropBox li.jsMultipleSelectItem a.remove {
+ul.jsMultipleSelectDestination li.jsMultipleSelectItem a.remove {
     position: relative;
     display: none;
     margin-top: -5px;
@@ -101,6 +101,6 @@ ul.jsMultipleSelectDropBox li.jsMultipleSelectItem a.remove {
     font-size: 20px;
     font-weight: bold;
 }
-ul.jsMultipleSelectDropBox li:hover a.remove {
+ul.jsMultipleSelectDestination li:hover a.remove {
     display: block; /* THIS IS IMPORTANT or you wont see the delete button */
 }
