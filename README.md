@@ -74,8 +74,9 @@ The `<li>` elements Attributes
 - `data-value` the value which will be add to the hidden input fields, created when selecting this value.
 - `data-type` you can also add the data-type attribute only/also to the <i>option</i> `<li>` elements to specify their behavior.
 
-You can add the follwoing `li` element to add a filter input: `<li class="filter"><input type="text" placeholder="Type here to filter"></li>`.
+<b>To add a Filter</b> add the follwoing `li` element to your <i>option boxes</i>: `<li class="filter"><input type="text" placeholder="Type here to filter"></li>`.
 
+<br>
 
 **The <i>destination box</i> `<ul>` element**
 
