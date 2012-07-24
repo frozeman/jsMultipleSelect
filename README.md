@@ -132,6 +132,7 @@ thistexthelpstomakealinbreakaftertheimage<br>
   - `data-value` the value which the already selected <i>option</i> will have.
   - `data-name` the name attribute of the input field which this <i>option</i> has.
 
+You can place a `<a href="#" class="clearJsMultipleSelect" data-jsMultipleSelect="1">Clear Selection</a>`  somewhere with the right `data-jsMultipleSelect` ID attribute, to clear the corresponding <i>destination box</i>.
 
 The Output
 ---------------
