@@ -8,7 +8,12 @@
 
 body {
     font: 13px Helvetica, Verdana, Arial;
-    background-color: #f2f2f2;
+    background-color: #fafafa;
+    padding: 20px 40px;
+}
+.container {
+    width: 610px;
+    margin: auto;
 }
 h2 {
     font-size: 16px;
@@ -43,7 +48,24 @@ div.secondSelection .right {
     width: 300px;
     float:right;
 }
-.clear {
+div.clear {
     clear:both;
     padding-top: 10px;
+    text-align: center;
+}
+div.clear li {
+    text-align: left;
+}
+
+input[type="submit"] {
+    font-size: 30px;
+}
+
+li {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }

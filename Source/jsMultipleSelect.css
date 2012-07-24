@@ -104,3 +104,13 @@ ul.jsMultipleSelectDestination li.jsMultipleSelectItem a.remove {
 ul.jsMultipleSelectDestination li:hover a.remove {
     display: block; /* THIS IS IMPORTANT or you wont see the delete button */
 }
+
+a.clearJsMultipleSelect {
+    position: relative;
+    top: 10px;
+    text-decoration: none;
+    color: #82a5f6;
+}
+a.clearJsMultipleSelect:hover {
+    color: #ec882c
+}

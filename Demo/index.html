@@ -42,73 +42,79 @@
 </head>
 <body>
 
-    <h1>jsMultipleSelect Demo</h1>
+    <div class="container">
+
+        <h1>jsMultipleSelect Demo</h1>
 
 
-    <form action="output.php" method="post">
+        <form action="output.php" method="post">
 
-        <div class="firstSelection">
-            <div class="left">
-                <h2>Keeps Options (default)</h2>
-                <ul class="jsMultipleSelect" data-jsMultipleSelect="1" data-name="thingsToHave">
-                    <li class="filter"><input type="text" placeholder="Type here to filter"></li>
+            <div class="firstSelection">
+                <div class="left">
+                    <h2>Keeps Options (default)</h2>
+                    <ul class="jsMultipleSelect" data-jsMultipleSelect="1" data-name="thingsToHave">
+                        <li class="filter"><input type="text" placeholder="Type here to filter"></li>
 
-                    <li class="jsMultipleSelectItem" data-value="house"><strong>Beautiful House</strong></li>
-                    <li class="jsMultipleSelectItem" data-value="garage"><strong>Garage</strong></li>
-                    <li class="jsMultipleSelectItem" data-value="garden"><strong>Nice Garden</strong></li>
-                    <li class="jsMultipleSelectItem" data-value="balcony"><strong>Big Balcony</strong></li>
-                    <li class="jsMultipleSelectItem" data-value="field"><strong>Field behind</strong></li>
-                </ul>
+                        <li class="jsMultipleSelectItem" data-value="house"><strong>Beautiful House</strong></li>
+                        <li class="jsMultipleSelectItem" data-value="garage"><strong>Garage</strong></li>
+                        <li class="jsMultipleSelectItem" data-value="garden"><strong>Nice Garden</strong></li>
+                        <li class="jsMultipleSelectItem" data-value="balcony"><strong>Big Balcony</strong></li>
+                        <li class="jsMultipleSelectItem" data-value="field"><strong>Field behind</strong></li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <h2>Removes Options</h2>
+                    <ul class="jsMultipleSelect" data-jsMultipleSelect="1" data-type="remove" data-name="ingredients">
+                        <li class="filter"><input type="text" placeholder="Type here to filter"></li>
+
+                        <li class="jsMultipleSelectItem" data-value="rice">Brown rice</li>
+                        <li class="jsMultipleSelectItem" data-value="salad">Salad</li>
+                        <li class="jsMultipleSelectItem" data-value="tomatoes">Tomatoes</li>
+                        <li class="jsMultipleSelectItem" data-value="potatoes">Organic Potatoes</li>
+                        <li class="jsMultipleSelectItem" data-value="avocado">Avocado</li>
+                    </ul>
+                </div>
+                <div class="clear">
+                    <h2>Destination Box<br>(..yes, creates hidden input elements on the fly)</h2>
+                    <ul class="jsMultipleSelectDestination" data-jsMultipleSelect="1">
+                    </ul>
+                    <a href="#" class="clearJsMultipleSelect" data-jsMultipleSelect="1">Clear Selection</a>
+                </div>
             </div>
-            <div class="right">
-                <h2>Removes Options</h2>
-                <ul class="jsMultipleSelect" data-jsMultipleSelect="1" data-type="remove" data-name="ingredients">
-                    <li class="filter"><input type="text" placeholder="Type here to filter"></li>
 
-                    <li class="jsMultipleSelectItem" data-value="rice">Brown rice</li>
-                    <li class="jsMultipleSelectItem" data-value="salad">Salad</li>
-                    <li class="jsMultipleSelectItem" data-value="tomatoes">Tomatoes</li>
-                    <li class="jsMultipleSelectItem" data-value="potatoes">Organic Potatoes</li>
-                    <li class="jsMultipleSelectItem" data-value="avocado">Avocado</li>
-                </ul>
+            <br>
+            <br>
+            <hr>
+
+            <div class="secondSelection">
+                <div class="left">
+                    <h2>Keeps Options and allows adding duplicates<br>(and no filter)</h2>
+                    <ul class="jsMultipleSelect" data-jsMultipleSelect="2" data-type="duplicates" data-name="foodToEat">
+                        <li class="jsMultipleSelectItem" data-value="veggieBurger">Veggie Burger</li>
+                        <li class="jsMultipleSelectItem" data-value="blueCheese" data-type="remove">Blue Cheese (gets removed)</li>
+                        <li class="jsMultipleSelectItem" data-value="tomatoSalad">Tomato Salad</li>
+                        <li class="jsMultipleSelectItem" data-value="Beans">Backed Beans</li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <h2>Destination Box<br>(With predefined Selections)</h2>
+                    <ul class="jsMultipleSelectDestination" data-jsMultipleSelect="2">
+                        <li data-value="veggieBurger" data-name="foodToEat"></li>
+                        <li data-value="tomatoSalad" data-name="foodToEat"></li>
+                    </ul>
+                    <a href="#" class="clearJsMultipleSelect" data-jsMultipleSelect="2">Clear Selection</a>
+                </div>
             </div>
+
+
             <div class="clear">
-                <h2>Destination Box<br>(..yes, creates hidden input elements on the fly)</h2>
-                <ul class="jsMultipleSelectDestination" data-jsMultipleSelect="1">
-                </ul>
-                <a href="#" class="clearJsMultipleSelect" data-jsMultipleSelect="1">Clear Selection</a>
+                <br><br>
+                <hr>
+                <input type="submit" value="SUBMIT BOTH SELECTIONS">
             </div>
-        </div>
+        </form>
 
-        <br>
-        <br>
-        <hr>
-
-        <div class="secondSelection">
-            <div class="left">
-                <h2>Keeps Options and allows adding duplicates<br>(and no filter)</h2>
-                <ul class="jsMultipleSelect" data-jsMultipleSelect="2" data-type="duplicates" data-name="foodToEat">
-                    <li class="jsMultipleSelectItem" data-value="veggieBurger">Veggie Burger</li>
-                    <li class="jsMultipleSelectItem" data-value="blueCheese" data-type="remove">Blue Cheese (gets removed)</li>
-                    <li class="jsMultipleSelectItem" data-value="tomatoSalad">Tomato Salad</li>
-                    <li class="jsMultipleSelectItem" data-value="Beans">Backed Beans</li>
-                </ul>
-            </div>
-            <div class="right">
-                <h2>Destination Box<br>(With predefined Selections)</h2>
-                <ul class="jsMultipleSelectDestination" data-jsMultipleSelect="2">
-                    <li data-value="veggieBurger" data-name="foodToEat"></li>
-                    <li data-value="tomatoSalad" data-name="foodToEat"></li>
-                </ul>
-                <a href="#" class="clearJsMultipleSelect" data-jsMultipleSelect="2">Clear Selection</a>
-            </div>
-        </div>
-
-        <div class="clear">
-            <br><br>
-            <input type="submit" value="SUBMIT BOTH SELECTIONS">
-        </div>
-    </form>
+    </div>
 
 </body>
 </html>
