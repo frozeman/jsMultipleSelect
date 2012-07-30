@@ -12,7 +12,7 @@ ul.jsMultipleSelectDestination {
     margin: 0;
     padding: 3px 5px;
     list-style: none;
-    min-height: 150px;
+    min-height: 180px;
     max-height: 350px;
     overflow: auto;
     background-color: #fff;
@@ -28,8 +28,8 @@ ul.jsMultipleSelectDestination {
 }
 
 /* each SELECT ITEM */
-ul.jsMultipleSelect li.jsMultipleSelectItem,
-ul.jsMultipleSelectDestination li.jsMultipleSelectItem {
+ul.jsMultipleSelect li.jsMultipleSelectOption,
+ul.jsMultipleSelectDestination li.jsMultipleSelectOption {
     position: relative;
     margin: 3px 0;
     padding: 3px 5px;
@@ -43,8 +43,8 @@ ul.jsMultipleSelectDestination li.jsMultipleSelectItem {
     border-radius: 4px;
     -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
 }
-ul.jsMultipleSelect li.jsMultipleSelectItem:hover,
-ul.jsMultipleSelectDestination li.jsMultipleSelectItem:hover {
+ul.jsMultipleSelect li.jsMultipleSelectOption:hover,
+ul.jsMultipleSelectDestination li.jsMultipleSelectOption:hover {
     background-color: #c7d7fa;
 }
 
@@ -85,13 +85,13 @@ ul.jsMultipleSelectDestination {
     min-height: 150px;
     background-color: #f6f7fc;
 }
-ul.jsMultipleSelectDestination li.jsMultipleSelectItem:hover {
+ul.jsMultipleSelectDestination li.jsMultipleSelectOption:hover {
     background-color: #fff;
 }
-ul.jsMultipleSelectDestination li.jsMultipleSelectItem span {
+ul.jsMultipleSelectDestination li.jsMultipleSelectOption span {
     color: #82a5f6;
 }
-ul.jsMultipleSelectDestination li.jsMultipleSelectItem a.remove {
+ul.jsMultipleSelectDestination li.jsMultipleSelectOption a.remove {
     position: relative;
     display: none;
     margin-top: -5px;

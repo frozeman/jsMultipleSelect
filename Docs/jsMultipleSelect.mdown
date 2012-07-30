@@ -71,9 +71,9 @@ and one <i>destination box</i> `<ul>` element with the class <b>"jsMultipleSelec
     <ul class="jsMultipleSelect" data-name="myInputFieldName" data-type="duplicates" data-jsMultipleSelect="1">
         <li class="filter"><input type="text" placeholder="Type here to filter"></li>
 
-        <li class="jsMultipleSelectItem" data-value="myValue1">Value Name 1></li>
-        <li class="jsMultipleSelectItem" data-value="myValue2">Value Name 2></li>
-        <li class="jsMultipleSelectItem" data-value="myValue3" data-type="remove">Removeable Value Name 3></li>
+        <li class="jsMultipleSelectOption" data-value="myValue1">Value Name 1></li>
+        <li class="jsMultipleSelectOption" data-value="myValue2">Value Name 2></li>
+        <li class="jsMultipleSelectOption" data-value="myValue3" data-type="remove">Removeable Value Name 3></li>
     </ul>
 
 
@@ -88,6 +88,7 @@ and one <i>destination box</i> `<ul>` element with the class <b>"jsMultipleSelec
 
 - **The `<li>` elements Attributes**
 
+  - `class` each option `li` must have the class "jsMultipleSelectOption"
   - `data-value` the value which will be add to the hidden input fields, created when selecting this value.
   - `data-type` you can also add the data-type attribute only/also to the <i>option</i> `<li>` elements to specify their behavior.
 
