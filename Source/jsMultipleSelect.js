@@ -60,6 +60,9 @@ var jsMultipleSelect = new Class({
           item.store('duplicateCount',--duplicateCount);
 
         clone.dispose();
+
+        // fire event
+        jsMultipleSelectDestination.fireEvent('remove',[item.getProperty('data-value'),item.getParent('ul.jsMultipleSelect').getProperty('data-name'),item,clone,item.getParent('ul.jsMultipleSelect')]);
       };
 
 

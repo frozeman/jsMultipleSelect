@@ -67,6 +67,15 @@ If you <b>want to customize</b> it you can use the follwing options:
       - `clone` a reference to the `<li>` element in the <i>destination box</i>
       - `optionBox` a reference to the <i>option box</i> where the option was coming from
 
+  - `remove` will be fired on the <i>destination box</i> when an <i>option</i> is removed.
+    The event function will get the following parameters:
+      - `value` the value of the selected <i>option</i>
+      - `name` the name of the input field of the selected <i>option</i>
+      - `option` a reference to the `<li>` element in the <i>option box</i>
+      - `clone` a reference to the `<li>` element in the <i>destination box</i>
+      - `optionBox` a reference to the <i>option box</i> where the option was coming from
+
+
   - `parsed` will be fired on the <i>destination box</i> when the predefined selections inside the <i>destination box</i> are parsed. (You have to add a Eventlistener to the <i>destination box</i> BEFORE you call the <i>jsMultipleSelect</i> class, otherwise you won't catch the event)
     The event function will get the following parameters:
       - `value` the value of the selected <i>option</i>
