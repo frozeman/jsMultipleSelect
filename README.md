@@ -57,22 +57,24 @@ If you <b>want to customize</b> it you can use the follwing options:
   - `removeButtonClass` The class which will be add to the remove button
   <br>(default: `remove`)
 
+
 - **Events**
 
   - `select` will be fired on the <i>destination box</i> when an <i>option</i> is selected.
     The event function will get the following parameters:
       - `value` the value of the selected <i>option</i>
       - `name` the name of the input field of the selected <i>option</i>
-      - `option` a reference to the `<li>` element in the <i>option box</i>
       - `clone` a reference to the `<li>` element in the <i>destination box</i>
+      - `option` a reference to the `<li>` element in the <i>option box</i>
       - `optionBox` a reference to the <i>option box</i> where the option was coming from
+
 
   - `remove` will be fired on the <i>destination box</i> when an <i>option</i> is removed.
     The event function will get the following parameters:
       - `value` the value of the selected <i>option</i>
       - `name` the name of the input field of the selected <i>option</i>
-      - `option` a reference to the `<li>` element in the <i>option box</i>
       - `clone` a reference to the `<li>` element in the <i>destination box</i>
+      - `option` a reference to the `<li>` element in the <i>option box</i>
       - `optionBox` a reference to the <i>option box</i> where the option was coming from
 
 
@@ -80,9 +82,10 @@ If you <b>want to customize</b> it you can use the follwing options:
     The event function will get the following parameters:
       - `value` the value of the selected <i>option</i>
       - `name` the name of the input field of the selected <i>option</i>
-      - `option` a reference to the `<li>` element in the <i>option box</i>
       - `clone` a reference to the `<li>` element in the <i>destination box</i>
+      - `option` a reference to the `<li>` element in the <i>option box</i>
       - `optionBox` a reference to the <i>option box</i> where the option was coming from
+
 
 
 The HTML markup
@@ -90,6 +93,9 @@ The HTML markup
 
 You need at least one <i>option box</i> `<ul>` element with the class <b>"jsMultipleSelect"</b><br>
 and one <i>destination box</i> `<ul>` element with the class <b>"jsMultipleSelectDestination"</b>.
+
+Each <i>option</i> `li` stores a reference to their clone and visa versa. Just call `clone.retrieve('option') or option.retrieve('clone')` and you get the `li` in the <i>option boxes</i> or the `li` in the <i>destination box</i>.
+
 
 ### The <i>option boxes</i> `<ul>` elements
 
@@ -130,6 +136,8 @@ thistexthelpstomakealinbreakaftertheimage<br>
 
     #HTML
     <ul class="jsMultipleSelectDestination" data-jsMultipleSelect="1">
+        <li data-value="myValue1" data-name="myInputFieldName" data-number="1"></li>
+        <li data-value="myValue1" data-name="myInputFieldName" data-number="2"></li>
         <li data-value="myValue2" data-name="myInputFieldName"></li>
         <li data-value="myValue3" data-name="myInputFieldName"></li>
     </ul>
@@ -141,6 +149,23 @@ thistexthelpstomakealinbreakaftertheimage<br>
 - **The `<li>` elements Attributes**
   - `data-value` the value which the already selected <i>option</i> will have.
   - `data-name` the name attribute of the input field which this <i>option</i> has.
+  - `data-number` (optional) you can specify a specific number which this option will have, this number will be add to the text and also to the elements storage. If you leavie this attribute, then the number will be spcified automatically, starting at 1.
+
+- **The `<li>` option data**
+  - each `li` has the number number, value and name stored, you can retrieve this by calling `$$('#anIdToMyDestinationBox > li.jsMultipleSelectOption').retrieve('number');`, `...retrieve('value');` or `retrieve('name');`.
+  - You can also just take the data-... properies, like: `$$('#anIdToMyDestinationBox > li.jsMultipleSelectOption').getProperty('data-number');` etc..
+
+
+**Selections**
+
+The <i>destination box</i> `ul` stores a reference to two arrays. The `removedOptions` and the `selectedOptions` array.
+You can retrieve them by calling `$('anIdToMyDestinationBox').retrieve('selectedOptions');` etc.
+
+  - `selectedOptions` An array with the currently selected <i>options</i> (a referenz to the <i>option</i> `li` within the <i>destination box</i>)
+  - `removedOptions` An array with all the currently removed options within the <i>option boxes</i>, (when any of the <i>options</i> or <i>option boxes</i> have the attribute `data-type="remove"`)
+
+
+**Clear selection**
 
 You can place a `<a href="#" class="clearJsMultipleSelect" data-jsMultipleSelect="1">Clear Selection</a>`  somewhere with the right `data-jsMultipleSelect` ID attribute, to clear the corresponding <i>destination box</i>.
 
