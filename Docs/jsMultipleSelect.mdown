@@ -36,7 +36,7 @@ If you <b>want to customize</b> it you can use the follwing options:
   - `highlightColor`  The color which will be used to highlight the selection destination when a element gets added
   <br>(default: `#cedee6`)
   - `removeButton`  The remove button which will be add to the all options in the <i>destination box</i>
-  <br>(default: `new Element('a',{'html':'&#215;'})`)
+  <br>(default: `new Element('a',{'html':'&#215;','href':'#'})`)
   - `removeButtonClass` The class which will be add to the remove button
   <br>(default: `remove`)
 

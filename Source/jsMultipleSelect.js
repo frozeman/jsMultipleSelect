@@ -20,7 +20,7 @@ var jsMultipleSelect = new Class({
 
   options: {
     highlightColor: '#cedee6',
-    removeButton: new Element('a',{'html':'&#215;'}),
+    removeButton: new Element('a',{'html':'&#215;','href':'#'}),
     removeButtonClass: 'remove'
   },
   initialize : function(options){
@@ -53,7 +53,9 @@ var jsMultipleSelect = new Class({
 
 
       // CLOSE FUNCTION
-      var closeFunction = function() {
+      var closeFunction = function(e) {
+        if(e) e.stop();
+
         var clone          = this.getParent('li');
         var option         = clone.retrieve('option');
 
@@ -213,7 +215,8 @@ var jsMultipleSelect = new Class({
           var close = self.options.removeButton.clone();
           close.addClass(self.options.removeButtonClass);
           close.setStyle('display','none');
-          close.addEvent('click',function(){
+          close.addEvent('click',function(e){
+            e.stop();
             filter.setProperty('value','');
             filter.fireEvent('keyup');
           });
@@ -267,7 +270,7 @@ var jsMultipleSelect = new Class({
         var name = selected.getProperty('data-name');
         var number = selected.getProperty('data-number');
 
-        $$('ul[data-name="'+name+'"] > li.jsMultipleSelectOption[data-value="'+value+'"]').each(function(option){
+        $$('ul[data-name="'+name+'"][data-jsMultipleSelect="'+jsMultipleSelectId+'"] > li.jsMultipleSelectOption[data-value="'+value+'"]').each(function(option){
 
           var clone = option.retrieve('clone');
           if(clone === null) return;
