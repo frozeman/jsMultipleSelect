@@ -1,5 +1,6 @@
 name:  jsMultipleSelect
 author:  frozeman
-current:  1.6
+current:  1.7
 category: Forms
+demo: http://jsfiddle.net/frozeman/ky2rJ/3/
 tags:  [Select,html5,widget,input]
